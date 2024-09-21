@@ -3,14 +3,16 @@ You can download the Postman collection using the following link:
     [POSTMAN COLLECTION](https://drive.google.com/file/d/16sGxJhKHff8H5q9bM_i-0TpHz-5fVsN3/view?usp=sharing)
 
 How to Run the Application
-Prerequisites:
-Docker: Ensure that Docker is installed on your system. You can download it from Docker's official website.
-Node.js: For running tests, Node.js should be installed on your system. You can download it from Node.js official website.
-Steps to Run the Application:
-Clone the repository and navigate to the project directory.
-Build and start the application using Docker:
+    Prerequisites:
+        Docker: Ensure that Docker is installed on your system. You can download it from Docker's official website.
+        Node.js: For running tests, Node.js should be installed on your system. You can download it from Node.js official website.
 
-    docker-compose up --build
+
+    Steps to Run the Application:
+        Clone the repository and navigate to the project directory.
+        Build and start the application using Docker:
+
+             docker-compose up --build
 
 This command will:
 Build the Docker images for both the PostgreSQL database and the application.
