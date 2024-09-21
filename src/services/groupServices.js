@@ -16,7 +16,6 @@ class GroupServices {
     let updatedUserList = [...userList, ...usersToAdd];
     updatedUserList = this.removeUsers(updatedUserList, usersToRemove);
 
-    console.log(updatedUserList)
 
     if (usersToAdd.length > 0 || usersToRemove.length > 0) {
       await group.update({ users_list: updatedUserList });

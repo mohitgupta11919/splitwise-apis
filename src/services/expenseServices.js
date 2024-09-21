@@ -60,7 +60,6 @@ class ExpenseService {
       // Create transactions based on the splits
       for (const [user_id, amount] of Object.entries(splits)) {
         const settle_with_user = user_id != payer_id ? payer_id : null;
-        console.log(settle_with_user)
 
         await Transaction.create({
           group_id,

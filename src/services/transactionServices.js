@@ -18,7 +18,6 @@ class TransactionServices {
         for (const transaction of transactions) {
             if (transaction.user_id == from_user) {
                 totalBalance -= transaction.amount;  // User 1's perspective
-                console.log(totalBalance)
             } else {
                 totalBalance += transaction.amount;  // User 2's perspective
             }
