@@ -1,6 +1,6 @@
 Postman Collection
 You can download the Postman collection using the following link: 
-    [text](https://drive.google.com/file/d/16sGxJhKHff8H5q9bM_i-0TpHz-5fVsN3/view?usp=sharing)
+    [POSTMAN COLLECTION](https://drive.google.com/file/d/16sGxJhKHff8H5q9bM_i-0TpHz-5fVsN3/view?usp=sharing)
 
 How to Run the Application
 Prerequisites:
