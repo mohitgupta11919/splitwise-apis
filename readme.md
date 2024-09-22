@@ -1,21 +1,21 @@
-Postman Collection
-You can download the Postman collection using the following link: 
+1. Postman Collection
+    You can download the Postman collection using the following link: 
     [POSTMAN COLLECTION](https://drive.google.com/file/d/16sGxJhKHff8H5q9bM_i-0TpHz-5fVsN3/view?usp=sharing)
 
-How to Run the Application
-    Prerequisites:
-        Docker: Ensure that Docker is installed on your system. You can download it from Docker's official website.
-        Node.js: For running tests, Node.js should be installed on your system. You can download it from Node.js official website.
+2. How to Run the Application
+   Prerequisites:
+    Docker: Ensure that Docker is installed on your system. You can download it from Docker's official website.
+    Node.js: For running tests, Node.js should be installed on your system. You can download it from Node.js official website.
 
 
-    Steps to Run the Application:
-        Clone the repository and navigate to the project directory.
-        Build and start the application using Docker:
+3. Steps to Run the Application:
+    Clone the repository and navigate to the project directory.
+    Build and start the application using Docker:
 
-             docker-compose up --build
+            docker-compose up --build
 
-This command will:
-Build the Docker images for both the PostgreSQL database and the application.
+    This command will:
+    Build the Docker images for both the PostgreSQL database and the application.
 
 Set up the containers with PostgreSQL running on port 5432 and the application running on port 3000.
 
@@ -34,8 +34,23 @@ This will execute all the test cases within the codebase.
 
 
 
-Implemented features:
-\\TODO
+Implemented features: (Please refer postman collections for APIs Request format)
+
+API Descriptions:
+1. User APIs
+Create User (POST /api/users/create_user)
+Description: Creates a new user by providing name, email, and phone.
+Body Example:
+json
+Copy code
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phone": "1234567890"
+}
+Get User by ID (GET /api/users/{id})
+Description: Fetches details of a user by their ID.
+
 
 Design Patterns Used:
 
