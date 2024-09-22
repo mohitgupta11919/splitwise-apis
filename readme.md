@@ -1,6 +1,8 @@
 1. Postman Collection
     You can download the Postman collection using the following link: 
-    [POSTMAN COLLECTION](https://drive.google.com/file/d/16sGxJhKHff8H5q9bM_i-0TpHz-5fVsN3/view?usp=sharing)
+    [POSTMAN COLLECTION](https://api.postman.com/collections/38487212-7e5f47a5-4a5e-438d-9354-b98004c771cb?access_key=PMAT-01J8C44C837Q96929P50B0YAHY)
+
+    Also, it's attached in the code.
 
 2. How to Run the Application
    Prerequisites:
@@ -34,23 +36,32 @@ This will execute all the test cases within the codebase.
 
 
 
-Implemented features: (Please refer postman collections for APIs Request format)
+Implemented features: (Please refer postman collection for APIs Request format)
 
-API Descriptions:
-1. User APIs
-Create User (POST /api/users/create_user)
-Description: Creates a new user by providing name, email, and phone.
-Body Example:
-json
-Copy code
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "phone": "1234567890"
-}
-Get User by ID (GET /api/users/{id})
-Description: Fetches details of a user by their ID.
+1. Create User and getuser by id.
+2. create groups and assign users to group. Also users can be updated in the group. get groups by id to view all info about      groups.
 
+3. record or update an expense in the group with different strategies (equal and exact) and this will create the expenses adn transactions for all the corresponding users in the groups.
+
+4. user can see all the transactions with date range  along with settlement status, groups,  he is involved in, and balances need to be settled with other users.
+
+5. User can settle balances within the group with a user and with a user irrespective of group (complete settlement)
+
+6. basic unit test cases.
+
+Other features:
+ update group
+ upadte expenses ( as of now it only update expense but not update corresponding transactions, this can be implemented similar to add expenses)
+ get group expenses
+ 
+Features can be implemented:
+ if more than 1 user pays the bill, we can add another strategy without affecting other stratagies.
+ updating shares/ split strategy  
+
+
+
+Scope for enhancement:
+ Better error messages and name of the fields
 
 Design Patterns Used:
 

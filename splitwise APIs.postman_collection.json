@@ -65,7 +65,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/users/1",
+							"raw": "http://localhost:3000/api/users/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -74,13 +74,14 @@
 							"path": [
 								"api",
 								"users",
-								"1"
+								"2"
 							]
 						}
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "#### 1\\. **User APIs**\n\n- **Create User (****`POST /api/users/create_user`****)**\n    \n    - Description: Creates a new user by providing name, email, and phone.\n        \n- **Get User by ID (****`GET /api/users/{id}`****)**\n    \n    - Description: Fetches details of a user by their ID."
 		},
 		{
 			"name": "group APIs",
@@ -92,7 +93,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"Office Group1\",\n  \"description\": \"Group for office expenses\",\n  \"users_list\": [1,2]\n  }",
+							"raw": "{\n  \"name\": \"Office Group2\",\n  \"description\": \"Group for office expenses\",\n  \"users_list\": [1,2]\n  }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -165,7 +166,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"groupId\": 1,\n    \"userIdsToAdd\":[2,3],\n    \"userIdsToRemove\":[1]\n}",
+							"raw": "{\n    \"groupId\": 2,\n    \"userIdsToAdd\":[1,2],\n    \"userIdsToRemove\":[]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -200,7 +201,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"test1\",\n    \"description\": \"jj\",\n    \"group_id\": 1,\n    \"total_expense_amount\": 500,\n    \"splitType\": \"equal\",\n    \"creator\": 1,\n    \"payer_id\": 2\n}",
+							"raw": "{\n    \"name\": \"test1\",\n    \"description\": \"jj\",\n    \"group_id\": 2,\n    \"total_expense_amount\": 5000,\n    \"splitType\": \"equal\",\n    \"creator\": 1,\n    \"payer_id\": 1\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -230,7 +231,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"test1\",\n    \"description\": \"jj\",\n    \"group_id\": 1,\n    \"total_expense_amount\": 500,\n    \"splitType\": \"exact\",\n    \"creator\": 1,\n    \"payer_id\": 3,\n    \"exact_share\":{\n        \"2\": 300,\n        \"3\": 200\n    }\n}",
+							"raw": "{\n    \"name\": \"test1\",\n    \"description\": \"jj\",\n    \"group_id\": 1,\n    \"total_expense_amount\": 500,\n    \"splitType\": \"exact\",\n    \"creator\": 1,\n    \"payer_id\": 1,\n    \"exact_share\":{\n        \"1\": 300,\n        \"2\": 200\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -289,7 +290,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/expenses/fetch?group_id=1&start_date='2024-01-01'&end_date='2025-01-01'",
+							"raw": "http://localhost:3000/api/expenses/fetch?group_id=2&start_date='2024-01-01'&end_date='2025-01-01'",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -303,7 +304,7 @@
 							"query": [
 								{
 									"key": "group_id",
-									"value": "1"
+									"value": "2"
 								},
 								{
 									"key": "start_date",
@@ -329,7 +330,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/balances/fetch_balance?from_user=3&to_user=2",
+							"raw": "http://localhost:3000/api/balances/fetch_balance?from_user=1&to_user=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -343,7 +344,7 @@
 							"query": [
 								{
 									"key": "from_user",
-									"value": "3"
+									"value": "1"
 								},
 								{
 									"key": "to_user",
@@ -360,7 +361,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/balances/fetch_balance?from_user=2&to_user=3&group_id=1",
+							"raw": "http://localhost:3000/api/balances/fetch_balance_group?from_user=2&to_user=1&group_id=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -369,7 +370,7 @@
 							"path": [
 								"api",
 								"balances",
-								"fetch_balance"
+								"fetch_balance_group"
 							],
 							"query": [
 								{
@@ -378,7 +379,7 @@
 								},
 								{
 									"key": "to_user",
-									"value": "3"
+									"value": "1"
 								},
 								{
 									"key": "group_id",
@@ -395,7 +396,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/balances/transactions/fetch?user_id=3&start_date=\"2024-09-01\"&end_date=\"2025-09-01\"",
+							"raw": "http://localhost:3000/api/balances/transactions/fetch?user_id=1&start_date=\"2024-09-01\"&end_date=\"2025-09-01\"",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -410,7 +411,7 @@
 							"query": [
 								{
 									"key": "user_id",
-									"value": "3"
+									"value": "1"
 								},
 								{
 									"key": "start_date",
@@ -432,7 +433,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"from_user\": 3,\n    \"to_user\": 2\n}",
+							"raw": "{\n    \"from_user\": 1,\n    \"to_user\": 2\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -462,7 +463,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"from_user\": 3,\n    \"to_user\": 2\n}",
+							"raw": "{\n    \"group_id\":1,\n    \"from_user\": 1,\n    \"to_user\": 2\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -470,7 +471,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/balances/settle_all",
+							"raw": "http://localhost:3000/api/balances/settle_for_group",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -479,7 +480,7 @@
 							"path": [
 								"api",
 								"balances",
-								"settle_all"
+								"settle_for_group"
 							]
 						}
 					},
