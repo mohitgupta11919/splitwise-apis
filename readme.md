@@ -1,8 +1,5 @@
 1. Postman Collection
-    You can download the Postman collection using the following link: 
-    [POSTMAN COLLECTION](https://api.postman.com/collections/38487212-7e5f47a5-4a5e-438d-9354-b98004c771cb?access_key=PMAT-01J8C44C837Q96929P50B0YAHY)
-
-    Also, it's attached in the code.
+ it's attached in the code with file name  splitwise APIs.postman_collection.json. please import the file.
 
 2. How to Run the Application
    Prerequisites:
