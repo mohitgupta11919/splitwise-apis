@@ -11,6 +11,7 @@
     Clone the repository and navigate to the project directory.
     Build and start the application using Docker:
 
+            npm install
             docker-compose up --build
 
     This command will:
